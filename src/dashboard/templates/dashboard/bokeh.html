@@ -1,0 +1,154 @@
+{% load static %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>Solar Dashboard</title>
+        
+        <style>
+        .btn-prime, .btn-prime:hover, .btn-prime:active, .btn-prime:visited {
+            background-color: #000080;
+            color: #ffffff;
+        }
+        .navbar-custom {
+            background-color: #000050
+        }
+        
+        .navbar-custom .navbar-brand,
+        .navbar-custom .navbar-text{
+            color: rgba(255,255,255,.8);
+        }
+        
+        .navbar-custom .navbar-nav .nav-link {
+            color: rgba(255,255,255,.5);
+        }
+        .navbar-custom .nav-item.active .nav-link{
+            color: #ffffff;
+        }
+        .navbar-nav{
+            background-color: #ffffff;
+            color: white;
+        }
+        
+        
+        </style>
+        
+
+
+        <link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.13.min.css" type="text/css" />
+        <link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.13.min.css" type="text/css" />
+
+        <!-- Bootstrap -->
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        
+        
+    </head>
+    <body>
+    <nav class="navbar navbar-custom">
+          <div class="container-fluid">
+                <div class="navbar-header">
+                  <a class="navbar-brand" href="#">DASHBOARD</a>
+                </div>
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="">Home</a></li>
+            </ul>
+          </div>
+    </nav>
+    
+    <div class="container">
+        <div class="row">
+            <div id ="div_Graph1" class = "col-sm-6">
+                {{ script_1 | safe }}
+                {{ div_1 | safe }}
+            
+                <form id="graph1" action="/dashboard/" method="post">
+                <div class="form-group row">
+                    <label for="sort" class="col-sm-2 col-sm-offset-1 control-label">X Axis</label>
+                    <div class="col-sm-3">
+                        <select class="form-control" name="X_axis_1" >
+                            <option value="day">Days</option>
+                            <option value="month">Months</option>
+                            <option value="year">Year</option>
+                        </select>
+                    </div>
+                    <label for="sort" class="col-sm-2 control-label">Y Axis</label>
+                    <div class="col-sm-3">
+                        <select class="form-control" name="Y_axis_1" >
+                            <option value="cuf">Capacity Utilisation Factor</option>
+                            <option value="fy">Final Yeild</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-1">
+                        <input type="submit" class="btn btn-prime" value="OK">
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div id ="div_Graph2" class = "col-sm-6">
+                <div>
+                    {{ script_2 | safe }}
+                    {{ div_2 | safe }}
+            
+                    <form id="graph2" action="/dashboard/" method="post" >
+                        <div class="form-group row">
+                            <label for="sort" class="col-sm-2 col-sm-offset-1 control-label">X Axis</label>
+                            <div class="col-sm-3">
+                                <select class="form-control" name="X_axis_2" >
+                                    <option value="time">Time</option>
+                                    <option value="eac_t">Eac Today</option>
+                                    <option value="vpv">Vpv</option>
+                                    <option value="ipv">Ipv</option>
+                                    <option value="ppv">Ppv</option>
+                                    <option value="vac">Vac</option>
+                                    <option value="iac">Iac</option>
+                                    <option value="pac">Pac</option>
+                                    <option value="fac">Fac</option>
+                                    
+                                </select>
+                            </div>
+                            <label for="sort" class="col-sm-2 control-label">Y Axis</label>
+                            <div class="col-sm-3">
+                                <select class="form-control" name="Y_axis_2" >
+                                    <option value="eac_t">Eac Today</option>
+                                    <option value="vpv">Vpv</option>
+                                    <option value="ipv">Ipv</option>
+                                    <option value="ppv">Ppv</option>
+                                    <option value="vac">Vac</option>
+                                    <option value="iac">Iac</option>
+                                    <option value="pac">Pac</option>
+                                    <option value="fac">Fac</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-1">
+                                <input type="submit" class="btn btn-prime" value="OK">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>   
+    <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-0.12.13.min.js"></script>
+    <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.13.min.js"></script>
+    <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-compiler-0.12.13.min.js"></script>
+    <script type="text/javascript">
+    Bokeh.set_log_level("info");
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    </body>
+    
+
+
+
+</html>
