@@ -3,7 +3,6 @@ import datetime
 from django.db import models
 from django_pandas.managers import DataFrameManager
 # Create your models here.
-from numpy.random import random_sample
 
 """Serial No. SN0005000043200005"""
 class SN05(models.Model):
@@ -22,7 +21,8 @@ class SN05(models.Model):
     objects = DataFrameManager()
     def __str__(self):
             return str(self.Time)
-    
+
+
 class SN05_D(models.Model):
     Time = models.DateTimeField('Time data was recorded') # Time the Data was acquired
     Eac_Today = models.DecimalField(max_digits=20, decimal_places=4) # Energy generation till the time of Day
@@ -37,7 +37,8 @@ class SN05_D(models.Model):
     objects = DataFrameManager()
     def __str__(self):
             return str(self.Time)
-    
+
+
 class SN05_M(models.Model):
     Time = models.DateTimeField('Time data was recorded') # Time the Data was acquired
     Eac_Today = models.DecimalField(max_digits=20, decimal_places=4) # Energy generation till the time of Day
@@ -53,6 +54,7 @@ class SN05_M(models.Model):
     def __str__(self):
             return str(self.Time)
 
+
 class SN05_Y(models.Model):
     Time = models.DateTimeField('Time data was recorded') # Time the Data was acquired
     Eac_Today = models.DecimalField(max_digits=20, decimal_places=4) # Energy generation till the time of Day
@@ -67,6 +69,7 @@ class SN05_Y(models.Model):
     objects = DataFrameManager()
     def __str__(self):
             return str(self.Time)
+
 
 """Serial No. SN000500004320007B"""    
 class SN7B(models.Model):
@@ -86,6 +89,7 @@ class SN7B(models.Model):
     def __str__(self):
         return str(self.Time)
 
+
 class SN7B_D(models.Model):
     Time = models.DateTimeField('Time data was recorded') # Time the Data was acquired
     Eac_Today = models.DecimalField(max_digits=20, decimal_places=4) # Energy generation till the time of Day
@@ -101,6 +105,7 @@ class SN7B_D(models.Model):
     def __str__(self):
         return str(self.Time)
 
+
 class SN7B_M(models.Model):
     Time = models.DateTimeField('Time data was recorded') # Time the Data was acquired
     Eac_Today = models.DecimalField(max_digits=20, decimal_places=4) # Energy generation till the time of Day
@@ -115,7 +120,8 @@ class SN7B_M(models.Model):
     objects = DataFrameManager()
     def __str__(self):
         return str(self.Time)
-    
+
+
 class SN7B_Y(models.Model):
     Time = models.DateTimeField('Time data was recorded') # Time the Data was acquired
     Eac_Today = models.DecimalField(max_digits=20, decimal_places=4) # Energy generation till the time of Day
@@ -130,6 +136,8 @@ class SN7B_Y(models.Model):
     objects = DataFrameManager()
     def __str__(self):
         return str(self.Time)
+
+
 """Serial No. SN0005000043200013"""
 class SN13(models.Model):
     Time = models.DateTimeField('Time data was recorded') # Time the Data was acquired
@@ -148,6 +156,7 @@ class SN13(models.Model):
     def __str__(self):
         return str(self.Time)
 
+
 class SN13_D(models.Model):
     Time = models.DateTimeField('Time data was recorded') # Time the Data was acquired
     Eac_Today = models.DecimalField(max_digits=20, decimal_places=4) # Energy generation till the time of Day
@@ -162,6 +171,7 @@ class SN13_D(models.Model):
     objects = DataFrameManager()
     def __str__(self):
         return str(self.Time)
+
 
 class SN13_M(models.Model):
     Time = models.DateTimeField('Time data was recorded') # Time the Data was acquired
@@ -178,6 +188,7 @@ class SN13_M(models.Model):
     def __str__(self):
         return str(self.Time)
 
+
 class SN13_Y(models.Model):
     Time = models.DateTimeField('Time data was recorded') # Time the Data was acquired
     Eac_Today = models.DecimalField(max_digits=20, decimal_places=4) # Energy generation till the time of Day
@@ -193,6 +204,8 @@ class SN13_Y(models.Model):
     def __str__(self):
         return str(self.Time)
 		
+
+
 """Serial No. SN0005000043200015"""
 class SN15(models.Model):
     Time = models.DateTimeField('Time data was recorded') # Time the Data was acquired
@@ -211,6 +224,7 @@ class SN15(models.Model):
     def __str__(self):
         return str(self.Time)
 
+
 class SN15_D(models.Model):
     Time = models.DateTimeField('Time data was recorded') # Time the Data was acquired
     Eac_Today = models.DecimalField(max_digits=20, decimal_places=4) # Energy generation till the time of Day
@@ -225,6 +239,7 @@ class SN15_D(models.Model):
     objects = DataFrameManager()
     def __str__(self):
         return str(self.Time)
+
 
 class SN15_M(models.Model):
     Time = models.DateTimeField('Time data was recorded') # Time the Data was acquired
@@ -241,6 +256,7 @@ class SN15_M(models.Model):
     def __str__(self):
         return str(self.Time)
 
+
 class SN15_Y(models.Model):
     Time = models.DateTimeField('Time data was recorded') # Time the Data was acquired
     Eac_Today = models.DecimalField(max_digits=20, decimal_places=4) # Energy generation till the time of Day
@@ -255,6 +271,7 @@ class SN15_Y(models.Model):
     objects = DataFrameManager()
     def __str__(self):
         return str(self.Time)
+
 
 """Serial No. SN0005000043200028"""
 class SN28(models.Model):
@@ -274,6 +291,7 @@ class SN28(models.Model):
     def __str__(self):
         return str(self.Time)
     
+
 class SN28_D(models.Model):
     Time = models.DateTimeField('Time data was recorded') # Time the Data was acquired
     Eac_Today = models.DecimalField(max_digits=20, decimal_places=4) # Energy generation till the time of Day
@@ -288,6 +306,7 @@ class SN28_D(models.Model):
     objects = DataFrameManager()
     def __str__(self):
         return str(self.Time)
+
 
 class SN28_M(models.Model):
     Time = models.DateTimeField('Time data was recorded') # Time the Data was acquired
@@ -304,6 +323,7 @@ class SN28_M(models.Model):
     def __str__(self):
         return str(self.Time)
 
+
 class SN28_Y(models.Model):
     Time = models.DateTimeField('Time data was recorded') # Time the Data was acquired
     Eac_Today = models.DecimalField(max_digits=20, decimal_places=4) # Energy generation till the time of Day
@@ -318,6 +338,7 @@ class SN28_Y(models.Model):
     objects = DataFrameManager()
     def __str__(self):
         return str(self.Time)
+
 
 """Serial No. SN0005000043200033"""    
 class SN33(models.Model):
@@ -337,6 +358,7 @@ class SN33(models.Model):
     def __str__(self):
         return str(self.Time)
 
+
 class SN33_D(models.Model):
     Time = models.DateTimeField('Time data was recorded') # Time the Data was acquired
     Eac_Today = models.DecimalField(max_digits=20, decimal_places=4) # Energy generation till the time of Day
@@ -351,6 +373,7 @@ class SN33_D(models.Model):
     objects = DataFrameManager()
     def __str__(self):
         return str(self.Time)
+
 
 class SN33_M(models.Model):
     Time = models.DateTimeField('Time data was recorded') # Time the Data was acquired
@@ -367,6 +390,7 @@ class SN33_M(models.Model):
     def __str__(self):
         return str(self.Time)
 
+
 class SN33_Y(models.Model):
     Time = models.DateTimeField('Time data was recorded') # Time the Data was acquired
     Eac_Today = models.DecimalField(max_digits=20, decimal_places=4) # Energy generation till the time of Day
@@ -381,6 +405,7 @@ class SN33_Y(models.Model):
     objects = DataFrameManager()
     def __str__(self):
         return str(self.Time)
+
 
 """Serial No. SN0005000043200034"""    
 class SN34(models.Model):
@@ -399,7 +424,8 @@ class SN34(models.Model):
     objects = DataFrameManager()
     def __str__(self):
         return str(self.Time)
-    
+
+
 class SN34_D(models.Model):
     Time = models.DateTimeField('Time data was recorded') # Time the Data was acquired
     Eac_Today = models.DecimalField(max_digits=20, decimal_places=4) # Energy generation till the time of Day
@@ -430,6 +456,7 @@ class SN34_M(models.Model):
     def __str__(self):
         return str(self.Time)
 
+
 class SN34_Y(models.Model):
     Time = models.DateTimeField('Time data was recorded') # Time the Data was acquired
     Eac_Today = models.DecimalField(max_digits=20, decimal_places=4) # Energy generation till the time of Day
@@ -444,6 +471,7 @@ class SN34_Y(models.Model):
     objects = DataFrameManager()
     def __str__(self):
         return str(self.Time)
+
 
 """Serial No. SN0005000043200044"""    
 class SN44(models.Model):
