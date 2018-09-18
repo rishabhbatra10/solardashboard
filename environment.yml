@@ -8,3 +8,4 @@ dependencies:
   - django-pandas==0.5.1
   - bokeh==0.13.0
   - django-model-utils>=1.4.0
+  - bokeh==0.12.13

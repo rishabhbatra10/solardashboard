@@ -23,5 +23,5 @@ setup(
     include_package_data=True,
     long_description=read('README.md'),
     classifiers=[],
-    install_requires=['pandas>=0.23.4', 'numpy>=1.15.1', 'Django==2.0.8', 'bokeh==0.13.0', 'django-pandas==0.5.1', 'django-model-utils>=1.4.0']
+    install_requires=['pandas>=0.23.4', 'numpy>=1.15.1', 'Django==2.0.8', 'bokeh==0.12.13', 'django-pandas==0.5.1', 'django-model-utils>=1.4.0']
 )
