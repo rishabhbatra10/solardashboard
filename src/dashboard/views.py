@@ -40,11 +40,11 @@ PARAM_MAP = {
     'vac': 'Vac',
     'iac': 'Iac',
     'fac': 'Fac',
-    'day': 'DATE',
-    'month': 'MONTH',
-    'year': 'YEAR',
-    'cuf': 'CAPACITY UTILISATION FACTOR',
-    'fy': 'FINAL YIELD'
+    'day': 'Date',
+    'month': 'Month',
+    'year': 'Year',
+    'cuf': 'Capacity Utilisation Factor',
+    'fy': 'Final Yield'
 }
 
 # dictionary containing units for parameters
@@ -113,8 +113,7 @@ def load_db_tables(compiled='day'):
     # getting DB names
     db_sn05, db_sn7b, db_sn13, db_sn15, db_sn28, db_sn33, db_sn34, db_sn44, db_sn48, db_sn66, db_sn83, db_sn89 = \
         compile_by(compiled[0].upper())
-    df_sn05 = DB_TABLES[db_sn05].objects.all().to_dataframe()
-    print(read_frame(DB_TABLES[db_sn05].objects.all()))
+    df_sn05 = DB_TABLES[db_sn05].objects.all().to_dataframe(fieldnames=['Time', 'Eac_Today', 'Vpv', 'Ipv', 'Ppv', 'Vac', 'Iac', 'Pac', 'Fac'])
     df_sn7b = DB_TABLES[db_sn7b].objects.all().to_dataframe(fieldnames=['Time', 'Eac_Today', 'Vpv', 'Ipv', 'Ppv', 'Vac', 'Iac', 'Pac', 'Fac'])
     df_sn13 = DB_TABLES[db_sn13].objects.all().to_dataframe(fieldnames=['Time', 'Eac_Today', 'Vpv', 'Ipv', 'Ppv', 'Vac', 'Iac', 'Pac', 'Fac'])
     df_sn15 = DB_TABLES[db_sn15].objects.all().to_dataframe(fieldnames=['Time', 'Eac_Today', 'Vpv', 'Ipv', 'Ppv', 'Vac', 'Iac', 'Pac', 'Fac'])
